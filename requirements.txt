@@ -1,0 +1,15 @@
+### dependency
+tqdm
+mlflow
+pandas
+numpy
+PyYAML
+tensorflow
+matplotlib
+seaborn
+sklearn
+flask
+mkdocs-material
+
+### local packages -
+# -e . # << uncomment this to install from setup.py

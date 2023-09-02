@@ -1,0 +1,63 @@
+# It contains all the configs required in the project
+
+artifacts:
+  ARTIFACTS_DIR: artifacts
+  TRAINED_MODEL_DIR: model
+  BASE_MODEL_DIR: base_model
+  BASE_MODEL_NAME: base_model.pickle
+  UPDATED_BASE_MODEL_NAME: updated_base_model.h5
+  CHECKPOINT_DIR: checkpoints
+  BASE_LOG_DIR: base_model_dir
+  TENSORBOARD_ROOT_LOG_DIR: tensorboard_log_dir
+  CALLBACKS_DIR: callbacks
+
+source_download_dirs:
+  - path_to_data_1
+  - path_to_data_1
+
+local_data_dirs:
+  - path_to_local_data_1
+  - path_to_local_data_2
+
+model_config:
+  BUFFER_size: 1000
+  BATCH_SIZE: 64
+  VOCAB_SIZE: 1000
+  OUTPUT_DIM: 64
+  EPOCHS: 10
+  METRICS: accuracy
+  VALIDATION_STEPS: 30
+  train_test_split: 0.25
+  random_state: 23
+  shuffle: True
+  activation_fn: relu
+
+
+data:
+  url: "https://www.kaggle.com/datasets/kazanova/sentiment140/download"
+  local_dir: dataset
+  data_file: data.zip
+  unzip_data_dir: tweets_dataset
+  downloaded_file_name: training.1600000.processed.noemoticon.csv
+  name_to_be_changed: tweets_dataset.csv
+  encoding_type: ISO-8859-1
+  column_length: 6
+  columns: ['target','Ids','Date','flag','User','tweet_text']
+  column1: target
+  column2: Ids
+  column3: Date
+  column4: flag
+  column5: User
+  column6: tweet_text
+  negative_sentiment: 0
+  positive_sentiment: 4
+  preprocessed_data_folder: preprocessed_dataset
+
+Eda_artifacts:
+  plots: Eda_plots
+  count_plot_name: count_plot
+
+Prediction_data:
+  sample_text_1: Today was very good day
+  sample_text_2: Todaw was very hectic day
+
